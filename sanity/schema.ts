@@ -8,15 +8,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       type: "document",
       fields: [
         {
-          name: "id",
-          title: "ID",
-          type: "number",
-          validation: (Rule) =>
-            Rule.required().integer().positive().greaterThan(100),
-        },
-        {
-          name: "name",
-          title: "Name",
+          name: "title",
+          title: "Title",
           type: "string",
         },
         {
@@ -24,36 +17,26 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "array",
           title: "Images",
           of: [{ type: "image" }],
-        },
-        {
-          name: "color",
-          title: "Color",
-          type: "string",
-        },
-        {
-          name: "size",
-          title: "Size",
-          type: "string",
-        },
-        {
-          name: "weight",
-          title: "Weight",
-          type: "string",
-        },
-        {
-          name: "fabric",
-          title: "Fabric",
-          type: "string",
+          validation: (Rule) => Rule.required(),
         },
         {
           name: "price",
           title: "Price",
           type: "number",
+          validation: (Rule) => Rule.required(),
+        },
+
+        {
+          name: "quantity",
+          title: "Quantity",
+          type: "number",
         },
         {
-          name: "features",
-          title: "Features",
-          type: "string",
+          name: "tags",
+          type: "array",
+          title: "Tags",
+          of: [{ type: "string" }],
+          validation: (Rule) => Rule.required(),
         },
         {
           name: "description",
@@ -91,8 +74,13 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       title: "Categories",
       fields: [
         {
-          name: "name",
-          title: "Name of Category",
+          name: "title",
+          title: "Title of Category",
+          type: "string",
+        },
+        {
+          name: "description",
+          title: "Description of Category",
           type: "string",
         },
         {

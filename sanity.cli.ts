@@ -3,8 +3,8 @@
 * Go to https://www.sanity.io/docs/cli to learn more.
 **/
 import { defineCliConfig } from 'sanity/cli'
-console.log("process.env:", process.env);
+
 const projectId = process.env.SANITY_STUDIO_PROJECT_ID
 const dataset = process.env.SANITY_STUDIO_DATASET
 
-export default defineCliConfig({ api: { projectId, dataset } })
+export default defineCliConfig({ api: { projectId: "4ejbxm89", dataset: "production" } })

@@ -11,7 +11,7 @@ import {deskTool} from 'sanity/desk'
 import {schema} from './sanity/schema'
 
 export default defineConfig({
-  title: "Amanasia Studio",
+  title: "Sooq",
   // basePath: '/studio',
   projectId: '4ejbxm89',
   dataset: 'production',
